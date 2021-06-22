@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Hewan {
@@ -28,14 +29,18 @@ public class Hewan {
     }
 
     public Hewan(int id, String namaHewan, String jenisHewan, String jenisKelamin) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
         this.id = id;
         this.namaHewan = namaHewan;
         this.jenisHewan = jenisHewan;
         this.jenisKelamin = jenisKelamin;
+
+        System.out.println(id+" "+ namaHewan + " "+ jenisHewan + " "+ jenisKelamin);
     }
 
-    public Hewan(int id, String namaHewan, String jenisHewan,
-                 String jenisKelamin, String usia, Date tanggalLahir, int banyakKaki, int harga) {
+    public Hewan(int id, String namaHewan, String jenisHewan, String jenisKelamin,
+                 String usia, Date tanggalLahir, int banyakKaki, int harga) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
         this.id = id;
         this.namaHewan = namaHewan;
         this.jenisHewan = jenisHewan;
@@ -44,6 +49,9 @@ public class Hewan {
         this.tanggalLahir = tanggalLahir;
         this.banyakKaki = banyakKaki;
         this.harga = harga;
+
+        System.out.println(id+" "+ namaHewan + " "+ jenisHewan +
+                " "+ jenisKelamin + " "+ usia + " "+ tanggalLahir +" "+ banyakKaki + " "+ harga);
     }
 
     public int getId() {
